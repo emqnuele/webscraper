@@ -1,0 +1,4 @@
+2025-11-16 20:30:24,108 - webscraper - INFO - ==> Elaborazione URL 1/1: https://www.example.com
+2025-11-16 20:30:24,109 - webscraper - INFO - Recupero pagina: https://www.example.com
+2025-11-16 20:30:24,489 - webscraper - INFO - Analisi HTML in corso...
+2025-11-16 20:30:24,528 - webscraper - INFO - Risultato salvato in: Results\scrape_www.example.com_page_20251116_203024_1.json

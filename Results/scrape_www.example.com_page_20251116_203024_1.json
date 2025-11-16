@@ -1,0 +1,90 @@
+{
+  "page": {
+    "url": "https://www.example.com/",
+    "status_code": 200,
+    "encoding": "ISO-8859-1",
+    "size_bytes": 513,
+    "size_readable": "513 bytes",
+    "headers": {
+      "Accept-Ranges": "bytes",
+      "Content-Type": "text/html",
+      "ETag": "\"bc2473a18e003bdb249eba5ce893033f:1760028122.592274\"",
+      "Last-Modified": "Thu, 09 Oct 2025 16:42:02 GMT",
+      "Vary": "Accept-Encoding",
+      "Content-Encoding": "gzip",
+      "Cache-Control": "max-age=86000",
+      "Date": "Sun, 16 Nov 2025 19:30:24 GMT",
+      "Content-Length": "363",
+      "Connection": "keep-alive",
+      "Alt-Svc": "h3=\":443\"; ma=93600"
+    }
+  },
+  "content": {
+    "title": "Example Domain",
+    "base_url": "https://www.example.com/",
+    "domain": "www.example.com",
+    "meta": {
+      "viewport": "width=device-width, initial-scale=1"
+    },
+    "article": {
+      "title": "Example Domain",
+      "subtitle": null,
+      "section": null,
+      "authors": [],
+      "published_at": null,
+      "updated_at": null,
+      "excerpt": "This domain is for use in documentation examples without needing permission. Avoid use in operations.",
+      "keywords": [],
+      "tags": [],
+      "body": {
+        "text": "This domain is for use in documentation examples without needing permission. Avoid use in operations.\n\nLearn more",
+        "paragraphs": [
+          "This domain is for use in documentation examples without needing permission. Avoid use in operations.",
+          "Learn more"
+        ],
+        "word_count": 17,
+        "reading_time_minutes": 0.1,
+        "source": "readability",
+        "html": "<html><body><div><body id=\"readabilityBody\"><div><h1>Example Domain</h1><p>This domain is for use in documentation examples without needing permission. Avoid use in operations.</p><p><a href=\"https://iana.org/domains/example\">Learn more</a></p></div></body></div></body></html>"
+      },
+      "media": {
+        "hero_image": null,
+        "gallery": [],
+        "videos": []
+      },
+      "links": [
+        {
+          "text": "Learn more",
+          "href": "https://iana.org/domains/example",
+          "is_external": true,
+          "title": ""
+        }
+      ],
+      "lists": {
+        "ul": [],
+        "ol": []
+      },
+      "tables": [],
+      "stats": {
+        "confidence": 0.61,
+        "paragraph_count": 2,
+        "has_media": false,
+        "has_links": true
+      }
+    },
+    "context": {
+      "headings": {
+        "h1": [
+          "Example Domain"
+        ],
+        "h2": [],
+        "h3": [],
+        "h4": [],
+        "h5": [],
+        "h6": []
+      },
+      "related_links": [],
+      "candidates": []
+    }
+  }
+}
