@@ -1,74 +1,74 @@
 # Web Scraper in Python
 
-Web scraper modulare che estrae e salva tutti i contenuti di una pagina web in formato JSON.
+Modular web scraper that extracts and saves the meaningful content of a web page as JSON.
 
-## Installazione dipendenze
+## Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## Utilizzo
+## Usage
 
-Lo scraper può essere usato in due modi:
+You can run the scraper in two ways:
 
-### 1. Linea di comando
+### 1. Command line
 
 ```bash
-# Scraping base - salva i risultati in ./Results
+# Basic scraping - saves results under ./Results
 python scraper.py https://example.com
 
-# Scraping multiplo - ogni URL genera un file JSON separato in ./Results
-python scraper.py https://example.com https://example.org/articolo
+# Multiple URLs - each one produces a JSON file in ./Results
+python scraper.py https://example.com https://example.org/article
 
-# Salvataggio in percorso specifico (solo con un singolo URL)
-python scraper.py https://example.com -o risultato.json
+# Save to a specific file (single URL only)
+python scraper.py https://example.com -o result.json
 
-# Specifica una cartella di output personalizzata
-python scraper.py https://example.com --output-dir ./miei_risultati
+# Custom output directory
+python scraper.py https://example.com --output-dir ./my_results
 
-# Stampa anche su console
+# Also print to stdout
 python scraper.py https://example.com --stdout
 
-# Opzioni aggiuntive
+# Additional options
 python scraper.py https://example.com --timeout 20 --user-agent "MyScraper/1.0" --no-pretty
 ```
 
-Opzioni disponibili:
-- `-o, --output`: Percorso del file di output JSON (solo quando è presente un unico URL)
-- `--output-dir`: Cartella in cui salvare i risultati (default `Results`)
-- `--stdout`: Stampa l'output su console oltre a salvarlo
-- `--timeout`: Timeout delle richieste HTTP (secondi)
-- `--user-agent`: User Agent personalizzato
-- `--no-pretty`: Disabilita la formattazione leggibile del JSON
+Available options:
+- `-o, --output`: JSON output path (only when a single URL is provided)
+- `--output-dir`: Directory where results are saved (default `Results`)
+- `--stdout`: Print JSON to console in addition to saving it
+- `--timeout`: HTTP request timeout (seconds)
+- `--user-agent`: Custom User-Agent string
+- `--no-pretty`: Disable pretty-printed JSON
 
-### 2. Modulo Python
+### 2. Python module
 
 ```python
 from content_extractor import ContentExtractor
 from json_formatter import save_json
 
-# Crea l'estrattore
+# Create the extractor
 extractor = ContentExtractor(timeout=10)
 
-# Estrai i contenuti
+# Extract content
 data = extractor.extract("https://example.com")
 
-# Salva il risultato
+# Save the result
 save_json(data, "output.json")
 ```
 
-## Struttura del progetto
+## Project structure
 
-Il progetto è composto da diversi moduli per una migliore organizzazione:
+The project is split into several modules for clarity:
 
-- `scraper.py`: Script principale per l'esecuzione da linea di comando
-- `content_extractor.py`: Orchestrazione dell'estrazione dei contenuti
-- `html_parser.py`: Recupero e parsing delle pagine HTML con focus sui contenuti giornalistici
-- `json_formatter.py`: Formattazione e salvataggio in formato JSON
-- `utils.py`: Funzioni di utilità condivise
+- `scraper.py`: Command line entry point
+- `content_extractor.py`: Coordinates the scraping workflow
+- `html_parser.py`: Fetches and parses HTML focusing on news articles
+- `json_formatter.py`: Formats and writes JSON
+- `utils.py`: Shared helper functions
 
-## Struttura del JSON di output
+## Output JSON structure
 
 ```json
 {
@@ -128,9 +128,9 @@ Il progetto è composto da diversi moduli per una migliore organizzazione:
 }
 ```
 
-## Esempi
+## Examples
 
-Per un esempio completo di utilizzo, puoi testare lo scraper con:
+For a quick test run:
 
 ```bash
 python scraper.py https://www.example.com
